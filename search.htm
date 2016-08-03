@@ -1,0 +1,23 @@
+<input type="text" ng-model="nameFilter" >
+<button>Search</button>
+
+<div class="container" ng-show="nameFilter.length>0">
+<div class="row">  
+
+<div ng-repeat="obj in List |filter:searchFilter">
+    
+   
+    <div class="col-md-3 col-sm-6 col-xs-12" ng-class="{'red': obj.gender === 'M' , 'blue': obj.gender === 'F'}">
+    
+        <div>{{obj.id}}</div>
+        <div>{{obj.gender}}</div>
+        <div>{{obj.name}}</div>
+        <div>{{obj.email}}</div>
+        <div>{{obj.city}}</div>
+        
+    </div>        
+    
+</div>
+        
+</div>        
+</div>
